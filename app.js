@@ -14,7 +14,7 @@ const commentRoutes = require('./routes/comments');
 const indexRoutes = require('./routes/index');
 const flash = require('connect-flash');
 
-
+const port = process.env.PORT || 3000;
 console.log(methodOverride());
 // seedDB();
 //Testing to commit
@@ -48,6 +48,6 @@ app.use(indexRoutes);
 app.use(commentRoutes);
 app.use(campgroundRoutes);
 
-app.listen(3000, function(){
-    console.log('Server is running with PORT 3000');
+app.listen(port, function(){
+    console.log('Server is running with PORT ${port}');
 });

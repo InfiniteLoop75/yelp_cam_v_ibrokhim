@@ -17,6 +17,8 @@ const flash = require('connect-flash');
 
 console.log(methodOverride());
 // seedDB();
+//Testing to commit
+
 mongoose.connect('mongodb://localhost/yelp_camp', {useMongoClient: true});
 app.set('view engine', 'ejs');
 app.use(flash());
